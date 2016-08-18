@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="sgm-plugin-barcode" version="0.1.0-SNAPSHOT"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+
+  <name>SGM Barcode Plugin</name>
+  <author>Uanderson Soares</author>
+  <license>Apache 2.0</license>
+  <keywords>sgm,barcode,plugin</keywords>
+
+  <!-- Android -->
+  <platform name="android">
+    <js-module src="www/android/SGMBarcode.js" name="SGMBarcode">
+      <clobbers target="sgm.plugins.SGMBarcode" />
+    </js-module>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SGMBarcode">
+        <param name="android-package" value="sgm.plugin.barcode.SGMBarcode" />
+      </feature>
+    </config-file>
+
+    <framework src="com.google.zxing:core:3.2.1" />
+    <framework src="com.google.zxing:javase:3.2.1" />
+
+    <source-file src="src/android/SGMBarcode.java" target-dir="src/sgm/plugin/barcode" />
+  </platform>
+</plugin>
