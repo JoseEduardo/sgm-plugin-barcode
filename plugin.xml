@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="sgm-plugin-barcode" version="0.1.0-SNAPSHOT"
+<plugin id="sgm-plugin-barcode" version="0.1.1"
     xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
   <name>SGM Barcode Plugin</name>
@@ -10,7 +10,7 @@
   <!-- Android -->
   <platform name="android">
     <js-module src="www/android/SGMBarcode.js" name="SGMBarcode">
-      <clobbers target="sgm.plugins.SGMBarcode" />
+      <clobbers target="sgm.plugin.SGMBarcode" />
     </js-module>
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="SGMBarcode">
