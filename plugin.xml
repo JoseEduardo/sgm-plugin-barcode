@@ -19,8 +19,8 @@
     </config-file>
 
     <framework src="com.google.zxing:core:3.2.1" />
-    <framework src="com.google.zxing:javase:3.2.1" />
 
+    <source-file src="src/android/Base64Reader.java" target-dir="src/sgm/plugin/barcode" />
     <source-file src="src/android/SGMBarcode.java" target-dir="src/sgm/plugin/barcode" />
   </platform>
 </plugin>
