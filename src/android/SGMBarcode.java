@@ -1,30 +1,44 @@
 package sgm.plugin.barcode;
 
+import com.google.zxing.NotFoundException;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import com.google.zxing.NotFoundException;
-
+/**
+ * Plugin responsible for decode barcode data from base64 images.
+ */
 public class SGMBarcode extends CordovaPlugin {
 
-  private static final String READ_ACTION = "read";
-
+  /**
+   * Execute plugin action.
+   *
+   * @param action   Action to be executed
+   * @param data     Array data passed as parameter
+   * @param callback Context to notify plugin back
+   * @return true when success, false otherwise
+   * @throws JSONException If JSON was invalid
+   */
   @Override
-  public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
-    if (READ_ACTION.equals(action)) {
-      try {
-        Base64Reader base64Reader = new Base64Reader();
-        String decodedMessage = base64Reader.read(data.getString(0));
-        callbackContext.success(decodedMessage);
-        return true;
-      } catch (NotFoundException ex) {
-        callbackContext.error("Not found");
-      }
+  public boolean execute(String action, JSONArray data, CallbackContext callback) throws JSONException {
+    if ("decode".equals(action)) {
+      return decode(data, callback);
     }
 
     return false;
+  }
+
+  private boolean decode(JSONArray data, CallbackContext callback) throws JSONException {
+    try {
+      String base64Image = data.getString(0);
+      String decodedText = Base64Decoder.decode(base64Image);
+      callback.success(decodedText);
+    } catch (NotFoundException ex) {
+      callback.error("Code not found in the base64 image");
+    }
+
+    return true;
   }
 }

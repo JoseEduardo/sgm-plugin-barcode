@@ -1,2 +1,2 @@
-# sgm-code-reader
-Simple qr code reader plugin for cordova
+# sgm-plugin-barcode
+Simple barcode decoder plugin for cordova
