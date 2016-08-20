@@ -1,0 +1,22 @@
+{
+  "name": "sgm-plugin-barcode",
+  "version": "0.1.3",
+  "cordova": {
+    "id": "sgm-plugin-barcode",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "SGM Barcode Plugin",
+  "repository": "https://github.com/uanderson/sgm-plugin-barcode.git",
+  "issue": "https://github.com/uanderson/sgm-plugin-barcode/issues",
+  "keywords": [
+    "ionic",
+    "cordova",
+    "barcode",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Uanderson Soares",
+  "license": "Apache 2.0"
+}

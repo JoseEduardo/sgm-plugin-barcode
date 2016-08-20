@@ -22,7 +22,7 @@ public class Base64Decoder {
   /**
    * Decode data from the base64 image. The image can be passed with
    * the data prefix <code>data:image/jpeg;base64,/9j/4AAQSkZJRgA...lft1f/2Q==</code>
-   * or withouth <code>/9j/4AAQSkZJRgA...lft1f/2Q==</code>.
+   * or without <code>/9j/4AAQSkZJRgA...lft1f/2Q==</code>.
    *
    * @param base64Image The base64 image
    * @return Decoded data if the image is valid
