@@ -8,7 +8,10 @@
     ]
   },
   "description": "SGM Barcode Plugin",
-  "repository": "https://github.com/uanderson/sgm-plugin-barcode.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uanderson/sgm-plugin-barcode.git"
+  },
   "issue": "https://github.com/uanderson/sgm-plugin-barcode/issues",
   "keywords": [
     "ionic",
@@ -18,5 +21,9 @@
     "cordova-android"
   ],
   "author": "Uanderson Soares",
-  "license": "Apache 2.0"
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/uanderson/sgm-plugin-barcode/issues"
+  },
+  "homepage": "https://github.com/uanderson/sgm-plugin-barcode#readme"
 }

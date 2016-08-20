@@ -3,7 +3,7 @@ SGMBarcode
 
 The `sgm.plugin.SGMBarcode` object provides functions to make decoding barcode data from base64 images easier.
 
-    cordova plugin add https://github.com/uanderson/sgm-plugin-barcode.git
+    cordova plugin add sgm-plugin-barcode
 
 # API reference
 
