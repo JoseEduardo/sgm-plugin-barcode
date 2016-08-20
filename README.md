@@ -17,9 +17,9 @@ Decode barcode data from the base64 image.
 Parameters
 ----------
 
-base64Image: the base64 image data URL
-successCallback: called with the decoded data (optional)
-errorCallback: called when it is not possible to decode the image (optional)
+**base64Image:** the base64 image data URL  
+**successCallback:** called with the decoded data (optional)  
+**errorCallback:** called when it is not possible to decode the image (optional)
 
 Supported platforms
 -------------------
